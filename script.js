@@ -159,4 +159,15 @@ document.head.appendChild(style);
     document.getElementById("help").scrollIntoView({
         behavior: "smooth"
     });
+    function toggleLanguage() {
+    alert("Button is working!");
+
+    const languageBtn = document.getElementById("languageBtn");
+
+    if (languageBtn.innerText === "हिंदी") {
+        languageBtn.innerText = "English";
+    } else {
+        languageBtn.innerText = "हिंदी";
+    }
+}
 

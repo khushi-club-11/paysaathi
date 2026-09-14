@@ -61,10 +61,10 @@ nav a {
 }
 
 .tag {
-    font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 800 bold;
+    letter-spacing: 4px;
+    margin-bottom: 10px;
 }
 
 .hero h1 {
@@ -281,4 +281,48 @@ footer {
         grid-template-columns: 1fr;
     }
 
+}
+/* Modern UI Upgrade */
+
+body {
+    background: linear-gradient(135deg, #f5f7ff, #eef8ff);
+}
+
+header {
+    background: white;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+}
+
+.hero {
+    background: linear-gradient(135deg, #eef4ff, #ffffff);
+    border-radius: 25px;
+    margin: 30px;
+    padding: 60px;
+}
+
+.hero h1 {
+    color: #1e293b;
+}
+
+.hero-text p {
+    color: #64748b;
+}
+
+.card, .tips div {
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.card:hover, .tips div:hover {
+    transform: translateY(-5px);
+}
+
+button {
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
 }
