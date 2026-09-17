@@ -159,15 +159,90 @@ document.head.appendChild(style);
     document.getElementById("help").scrollIntoView({
         behavior: "smooth"
     });
-    function toggleLanguage() {
-    alert("Button is working!");
+   function toggleLanguage() {
 
     const languageBtn = document.getElementById("languageBtn");
 
     if (languageBtn.innerText === "हिंदी") {
+
         languageBtn.innerText = "English";
+
+        // HOME
+        document.querySelector(".tag").innerText =
+            "डिजिटल पेमेंट सहायता";
+
+        document.querySelector(".hero-text h1").innerHTML =
+            'डिजिटल पेमेंट हेल्पर <span>युवाओं के लिए</span>';
+
+        document.querySelector(".hero-text h1 + p").innerText =
+            "डिजिटल पेमेंट, पेमेंट समस्याओं और ऑनलाइन सुरक्षा के लिए आसान मार्गदर्शन।";
+
+        document.querySelector(".hero-text button").innerText =
+            "पेमेंट सहायता लें →";
+
+
+        // HELP
+        document.querySelector("#help .tag").innerText =
+            "हम आपकी कैसे मदद कर सकते हैं?";
+
+        document.querySelector("#help h2").innerText =
+            "अपनी पेमेंट समस्या चुनें";
+
+        document.querySelector("#help .section-title p:last-child").innerText =
+            "समस्या चुनें और आसान चरण-दर-चरण मार्गदर्शन पाएं।";
+
+
+        const cards = document.querySelectorAll("#help .card");
+
+        cards[0].querySelector("h3").innerText = "पेमेंट विफल";
+        cards[0].querySelector("p").innerText =
+            "पेमेंट विफल हो गया या पूरा नहीं हुआ?";
+
+        cards[1].querySelector("h3").innerText = "नेटवर्क समस्या";
+        cards[1].querySelector("p").innerText =
+            "इंटरनेट या नेटवर्क की समस्या है?";
+
+        cards[2].querySelector("h3").innerText =
+            "धोखाधड़ी और सुरक्षा";
+        cards[2].querySelector("p").innerText =
+            "पेमेंट धोखाधड़ी से सुरक्षित रहना सीखें।";
+
+        cards[3].querySelector("h3").innerText =
+            "पेमेंट गाइड";
+        cards[3].querySelector("p").innerText =
+            "डिजिटल पेमेंट के चरण आसानी से सीखें।";
+
+
+        // SAFETY
+        document.querySelector("#safety .tag").innerText =
+            "सुरक्षित रहें";
+
+        document.querySelector("#safety h2").innerText =
+            "डिजिटल पेमेंट सुरक्षा टिप्स";
+
+        const tips = document.querySelectorAll("#safety .tips div");
+
+        tips[0].innerText = "🔐 अपना UPI PIN कभी साझा न करें।";
+        tips[1].innerText = "📱 पेमेंट करने से पहले रिसीवर को जांचें।";
+        tips[2].innerText = "🚨 अनजान पेमेंट मैसेज पर भरोसा न करें।";
+        tips[3].innerText = "🔎 संदिग्ध रिक्वेस्ट की जांच करें।";
+
+
+        // ABOUT
+        document.querySelector("#about .tag").innerText =
+            "हमारा प्रोजेक्ट";
+
+        document.querySelector("#about h2").innerText =
+            "हमने PaySaathi क्यों बनाया?";
+
+
+        // FOOTER
+        document.querySelector("footer p").innerText =
+            "© 2026 PaySaathi | ऑनलाइन पेमेंट ऐप अपनाने का अध्ययन";
+
     } else {
-        languageBtn.innerText = "हिंदी";
+
+        location.reload();
+
     }
 }
-
