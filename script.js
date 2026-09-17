@@ -32,18 +32,60 @@ function closePopup() {
 
 
 // Payment Failed
-function paymentFailed() {
-    showPopup(
-        "❌ Payment Failed",
-        `
-        <ol>
-            <li>Check your internet connection.</li>
-            <li>Wait a few minutes and check the transaction status.</li>
-            <li>Do not make repeated payments immediately.</li>
-            <li>If money was deducted, check your bank/payment app status.</li>
-        </ol>
-        `
-    );
+unction paymentFailed() {
+
+    const isHindi = document.getElementById("languageBtn").innerText === "English";
+
+    if (isHindi) {
+        showPopup(
+            "❌ पेमेंट विफल",
+            `
+            <p><b>क्या हुआ?</b></p>
+            <ol>
+                <li>अपना इंटरनेट कनेक्शन जांचें।</li>
+                <li>कुछ मिनट इंतजार करें और ट्रांजैक्शन का स्टेटस जांचें।</li>
+                <li>तुरंत बार-बार पेमेंट करने से बचें।</li>
+            </ol>
+
+            <p><b>💰 अगर पैसे कट गए हैं:</b></p>
+            <p>
+            दोबारा पेमेंट करने से पहले अपने बैंक अकाउंट या पेमेंट ऐप की
+            ट्रांजैक्शन हिस्ट्री जांचें।
+            </p>
+
+            <p><b>⚠️ अगर ट्रांजैक्शन Pending है:</b></p>
+            <p>
+            पेमेंट स्टेटस अपडेट होने का इंतजार करें और ट्रांजैक्शन
+            रेफरेंस नंबर सुरक्षित रखें।
+            </p>
+            `
+        );
+
+    } else {
+        showPopup(
+            "❌ Payment Failed",
+            `
+            <p><b>What happened?</b></p>
+            <ol>
+                <li>Check your internet connection.</li>
+                <li>Wait a few minutes and check the transaction status.</li>
+                <li>Do not make repeated payments immediately.</li>
+            </ol>
+
+            <p><b>💰 If money was deducted:</b></p>
+            <p>
+            Check your bank account or payment app transaction history
+            before making another payment.
+            </p>
+
+            <p><b>⚠️ If the transaction is still pending:</b></p>
+            <p>
+            Wait for the payment status to update and keep the transaction
+            reference number safely.
+            </p>
+            `
+        );
+    }
 }
 
 
