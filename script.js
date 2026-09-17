@@ -32,9 +32,9 @@ function closePopup() {
 
 
 // Payment Failed
-unction paymentFailed() {
-
-    const isHindi = document.getElementById("languageBtn").innerText === "English";
+function paymentFailed() {
+    const isHindi =
+        document.getElementById("languageBtn")?.innerText === "English";
 
     if (isHindi) {
         showPopup(
@@ -44,7 +44,7 @@ unction paymentFailed() {
             <ol>
                 <li>अपना इंटरनेट कनेक्शन जांचें।</li>
                 <li>कुछ मिनट इंतजार करें और ट्रांजैक्शन का स्टेटस जांचें।</li>
-                <li>तुरंत बार-बार पेमेंट करने से बचें।</li>
+                <li>तुरंत बार-बार पेमेंट न करें।</li>
             </ol>
 
             <p><b>💰 अगर पैसे कट गए हैं:</b></p>
@@ -60,7 +60,6 @@ unction paymentFailed() {
             </p>
             `
         );
-
     } else {
         showPopup(
             "❌ Payment Failed",
@@ -87,7 +86,6 @@ unction paymentFailed() {
         );
     }
 }
-
 
 // Network Problem
 function networkProblem() {
